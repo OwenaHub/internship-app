@@ -1,108 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo App Design (Pure CSS)</title>
     <!-- Using Inter font family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Main App Container -->
     <div class="app-container">
+      <!-- Header -->
+      <header>
+        <h1>My To-Do List</h1>
+        <p>Get things done, one task at a time.</p>
+      </header>
 
-        <!-- Header -->
-        <header>
-            <h1>My To-Do List</h1>
-            <p>Get things done, one task at a time.</p>
-        </header>
+      <!-- New Task Input -->
+      <form class="new-task-form">
+        <input type="text" placeholder="Add a new task..." />
+        <button type="submit" aria-label="Add new task">Add</button>
+      </form>
 
-        <!-- New Task Input -->
-        <form class="new-task-form">
-            <input type="text" placeholder="Add a new task..." />
-            <button type="submit" aria-label="Add new task">
-                Add
-            </button>
-        </form>
-
-        <!-- Task List -->
-        <div class="task-list">
-
-            <!-- Task Item 1 (Incomplete) -->
-            <div class="task-item">
-                <input id="task1" type="checkbox" />
-                <label for="task1" class="task-text">
-                    Finish the project proposal
-                </label>
-                <button class="delete-btn" aria-label="Delete task">
-                    <!-- Heroicons: trash -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 6h6v10H7V6zm2 2v6h2V8H9z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Task Item 2 (Incomplete) -->
-            <div class="task-item">
-                <input id="task2" type="checkbox" />
-                <label for="task2" class="task-text">
-                    Call the dentist
-                </label>
-                <button class="delete-btn" aria-label="Delete task">
-                    <!-- Heroicons: trash -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 6h6v10H7V6zm2 2v6h2V8H9z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Task Item 3 (Completed) -->
-            <div class="task-item">
-                <input id="task3" type="checkbox" checked />
-                <label for="task3" class="task-text">
-                    Buy groceries
-                </label>
-                <button class="delete-btn" aria-label="Delete task">
-                    <!-- Heroicons: trash -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 6h6v10H7V6zm2 2v6h2V8H9z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </button>
-            </div>
-
+      <!-- Task List -->
+      <div class="task-list">
+        <!-- Task Item 1 (Incomplete) -->
+        <div class="task-item">
+          <input id="task1" type="checkbox" />
+          <label for="task1" class="task-text">
+            Finish the project proposal
+          </label>
+          <button class="delete-btn" aria-label="Delete task">
+            <!-- Heroicons: trash -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 6h6v10H7V6zm2 2v6h2V8H9z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
         </div>
 
-        <!-- Filters and Footer -->
-        <footer>
-            <span class="footer-summary">
-                <span>2</span> tasks left
-            </span>
-            <div class="filter-buttons">
-                <button class="active">
-                    All
-                </button>
-                <button>
-                    Active
-                </button>
-                <button>
-                    Completed
-                </button>
-            </div>
-        </footer>
+        <!-- Task Item 2 (Incomplete) -->
+        <div class="task-item">
+          <input id="task2" type="checkbox" />
+          <label for="task2" class="task-text"> Call the dentist </label>
+          <button class="delete-btn" aria-label="Delete task">
+            <!-- Heroicons: trash -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 6h6v10H7V6zm2 2v6h2V8H9z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
 
+        <!-- Task Item 3 (Completed) -->
+        <div class="task-item">
+          <input id="task3" type="checkbox" checked />
+          <label for="task3" class="task-text"> Buy groceries </label>
+          <button class="delete-btn" aria-label="Delete task">
+            <!-- Heroicons: trash -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 6h6v10H7V6zm2 2v6h2V8H9z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filters and Footer -->
+      <footer>
+        <span class="footer-summary"> <span>2</span> tasks left </span>
+        <div class="filter-buttons">
+          <button class="active">All</button>
+          <button>Active</button>
+          <button>Completed</button>
+        </div>
+      </footer>
     </div>
-
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
